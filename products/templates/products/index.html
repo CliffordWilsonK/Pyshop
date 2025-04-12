@@ -1,0 +1,11 @@
+{% extends 'products/layout.html' %}
+{% block body%}
+    <h1> Products </h1>
+    <ul>
+        {% for product in products %}
+            <li> {{product.name}} </li>
+        {%empty%}
+            <li>No Items Available</li>
+        {% endfor %}
+    </ul>
+{% endblock %}
